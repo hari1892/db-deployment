@@ -38,12 +38,12 @@ pipeline {
                 echo 'Unit testing'
             }
         }
-        stage('Compare schema previous stage') {
+        stage('Deploying Target Database') {
             steps {
                 echo 'Comparing schema previous stage'
             }
         }
-        stage('Deploying Target Database') {
+        stage('Compare schema with previous stage') {
             steps {
                 //  checkout([$class: 'GitSCM', branches: [[name: '*/patch-1']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/hari1892/liquibase_dbdevops.git']]])
                 println(TAG)
